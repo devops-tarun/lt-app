@@ -26,12 +26,15 @@ systemctl enable mongod
 # Clone your MERN application (replace with your repo)
 cd /home/ubuntu
 git clone https://github.com/devops-tarun/lt-app.git
-cd lt-app
 
-# Install dependencies
+# switch to frontend, Install dependencies & Start it (adjust as needed)
+cd lt-app/frontend
 npm install
+nohup npm start &
 
-# Start the app (adjust as needed)
+# switch to backend, Install dependencies & Start it (adjust as needed)
+cd ../backend
+npm install
 nohup npm start &
 
 echo "Node.js LTS and MongoDB setup complete. App is running."
