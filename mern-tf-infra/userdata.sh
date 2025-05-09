@@ -25,7 +25,7 @@ systemctl enable mongod
 
 # Clone your MERN application (replace with your repo)
 cd /home/ubuntu
-git clone https://github.com/yourusername/your-mern-app.git
+git clone https://github.com/devops-tarun/lt-app.git
 cd lt-app
 
 # Install dependencies
