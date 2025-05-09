@@ -15,8 +15,8 @@ module "ec2" {
   vpc_id             = module.vpc.vpc_id
   private_subnet_id  = module.vpc.private_subnet_id
   key_name           = var.key_name
-  ami_id             = "ami-0c55b159cbfafe1f0"
-  instance_type      = "t3.medium"
+  ami_id             = "ami-0f9de6e2d2f067fca"
+  instance_type      = "t2.micro"
   user_data_path     = "${path.module}/userdata.sh"
   alb_sg_id          = module.alb.alb_sg_id
 }
