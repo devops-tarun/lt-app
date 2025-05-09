@@ -14,7 +14,7 @@ module "ec2" {
   source             = "./modules/ec2"
   vpc_id             = module.vpc.vpc_id
   private_subnet_id  = module.vpc.private_subnet_id
-  key_name           = var.key_name
+  key_name           = module.ec2.aws_key_pair.key_name
   ami_id             = "ami-0f9de6e2d2f067fca"
   instance_type      = "t2.micro"
   user_data_path     = "${path.module}/userdata.sh"
